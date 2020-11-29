@@ -1,0 +1,58 @@
+August 10, 2019; Ulf GRIESMANN
+- changed 'polycw' to always return a cell array, because
+  it's a terrible idea to have a function return different types.
+- better handling of empty polygons in the returned polygons. Now
+  properly returns an empty matrix.
+
+July 16, 2019; Ulf GRIESMANN
+- fixed bugs in polyinters.c
+- also return the polygon segments on which intersections
+  are found
+- renamed to polygon-toolbox
+
+July 15, 2019
+- Improved help text for 'polybool': emphasize that the arguments
+  polygons are assumed to be closed polygons
+
+October 15, 2018; Ulf Griesmann
+- fixed a bug in 'polycentr.c'
+- improved numerical test for equality in 'polyarea.c' and 'polycentr.c'
+- nicer formatting in 'polybool.m'
+
+October 05, 2018; Ulf Griesmann
+- fixed a bug in 'iscwmex.c'
+
+September 14, 2018; Ulf Griesmann
+- at long last got 'polyarea' to work. Now
+  both cases of polygons in which the last vertex
+  is identical to the first ("closed") and polygons
+  in which they are not ("open") are handled correctly.
+- fixed corresponding bugs in the 'polycentr' function.
+- new function 'polyinters' calculates line intersections 
+  of the segments of two polygons.
+
+February 21, 2017; Ulf Griesmann
+- bug fix in 'poly_area.c'. Incorrectly calculated
+  area of polygons with last vertex == first vertex
+  (The error in 'polyarea' was first pointed out
+  to me by Chris dijkbgf@gmail.com)
+
+November 24, 2016; Ulf Griesmann
+- update clipper library to version 6.4
+- add functions 'polyarea' and 'polycentr'.
+
+September 2, 2014; Ulf Griesmann
+- version 23
+- fix a small error in the help text
+- cast arguments mx* functions to mwSize and mwIndex as
+  needed to make function 64-bit proof.
+
+August 30, 2014; Ulf Griesmann
+- version 22
+- this version is based on the Clipper library
+  by Angus Johnson.
+
+June 5, 2014; Ulf Griesmann
+- version 21
+- update to recently released version 2.33 of the GPC library
+- various cleanups

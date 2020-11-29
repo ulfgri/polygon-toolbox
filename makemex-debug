@@ -1,0 +1,14 @@
+#!/bin/sh
+
+export CFLAGS='-g -Wall'
+
+#mkoctfile --mex -s polyboolmex.cpp clipper.cpp
+#mkoctfile --mex -s iscwmex.c
+#mkoctfile --mex -s isinpolygon.c
+#mkoctfile --mex -s polyarea.c
+#mkoctfile --mex -s polycentr.c
+mkoctfile --mex -s polyinters.c
+rm *.o
+
+echo "Done."
+
